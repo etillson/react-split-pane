@@ -236,6 +236,7 @@ class SplitPane extends React.Component {
 
   render() {
     const {
+      resizerContent,
       allowResize,
       children,
       className,
@@ -323,6 +324,7 @@ class SplitPane extends React.Component {
         <Resizer
           className={disabledClass}
           onClick={onResizerClick}
+          resizerContent={resizerContent}
           onDoubleClick={onResizerDoubleClick}
           onMouseDown={this.onMouseDown}
           onTouchStart={this.onTouchStart}
@@ -350,6 +352,7 @@ class SplitPane extends React.Component {
 }
 
 SplitPane.propTypes = {
+  resizerContent: PropTypes.node,
   allowResize: PropTypes.bool,
   children: PropTypes.arrayOf(PropTypes.node).isRequired,
   className: PropTypes.string,
@@ -378,6 +381,7 @@ SplitPane.propTypes = {
 };
 
 SplitPane.defaultProps = {
+  resizerContent : null,
   allowResize: true,
   minSize: 50,
   primary: 'first',

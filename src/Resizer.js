@@ -53,6 +53,7 @@ class Resizer extends React.Component {
 }
 
 Resizer.propTypes = {
+  resizerContent: PropTypes.node.isRequired,
   className: PropTypes.string.isRequired,
   onClick: PropTypes.func,
   onDoubleClick: PropTypes.func,
