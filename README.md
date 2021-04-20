@@ -41,6 +41,8 @@ yarn add react-split-pane
 
 ### primary
 
+This is an update to the original react-split-pane that allows for content to be added to the resizer.
+
 By dragging 'draggable' surface you can change size of the first pane.
 The first pane keeps then its size while the second pane is resized by browser window.
 By default it is the left pane for 'vertical' SplitPane and the top pane for 'horizontal' SplitPane.
@@ -59,6 +61,11 @@ In this example right pane keeps its width 200px while user is resizing browser 
   <div />
 </SplitPane>
 ```
+
+### resizerContent
+
+This is a prop that accepts any content to be used within the resizer div. You may have to pass the style prop to the resizer to make it position relative
+and the make any of the conent absolute.
 
 ### maxSize
 
