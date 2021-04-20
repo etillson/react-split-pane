@@ -7,20 +7,21 @@ export const RESIZER_DEFAULT_CLASSNAME = 'Resizer';
 class Resizer extends React.Component {
   render() {
     const {
-      className,
-      onClick,
+      resizerClassName,
+      resizerContent,
       onDoubleClick,
+      onTouchStart,
       onMouseDown,
       onTouchEnd,
-      onTouchStart,
-      resizerClassName,
+      className,
+      onClick,
       split,
-      style,
+      style
     } = this.props;
     const classes = [resizerClassName, split, className];
 
     return (
-      <span
+      <div
         role="presentation"
         className={classes.join(' ')}
         style={style}
@@ -44,8 +45,9 @@ class Resizer extends React.Component {
             event.preventDefault();
             onDoubleClick(event);
           }
-        }}
-      />
+        }}>
+        {resizerContent}
+      </div>
     );
   }
 }
